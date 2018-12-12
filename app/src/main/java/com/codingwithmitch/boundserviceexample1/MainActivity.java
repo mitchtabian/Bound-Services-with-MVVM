@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 final Runnable runnable = new Runnable() {
                     @Override
                     public void run() {
-                        if(aBoolean){
+                        if(mViewModel.getIsProgressBarUpdating.getValue()){
                             if(mViewModel.getBinder().getValue() != null){ // meaning the service is bound
                                 if(mService.getProgress() == mService.getMaxValue()){
                                     mViewModel.setIsProgressBarUpdating(false);
